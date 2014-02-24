@@ -1,5 +1,8 @@
 ViTables ChangeLog
 ==================
+** February 24, 2014 **
+A Syntax Error problem has been fixed in the setup.py module.
+
 ** December 12, 2013 **
 Context menus on views are now allowed which is a good thing for plugins.
 

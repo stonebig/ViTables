@@ -77,8 +77,8 @@ setup(name = 'ViTables', # The name of the distribution
     long_description = \
         """
         ViTables is a GUI for PyTables (a hierarchical database
-        package designed to efficently manage very large amounts of
-        data) . It allows to open arbitrarely large PyTables and HDF5
+        package designed to efficiently manage very large amounts of
+        data) . It allows to open arbitrarily large PyTables and HDF5
         files and browse their data and metadata in a variety of ways.
 
         """, 
@@ -131,10 +131,10 @@ for item in ['-h', '--help', '--help-commands', '--help-formats',
 
 if len(sys.argv) > 1 and not help_asked:
     if sys.argv[1] == 'build' :
-        print "\nBuild process completed.\n"
+        print("\nBuild process completed.\n")
     elif sys.argv[1] == 'sdist' :
-        print "\nSources package done.\n"
+        print("\nSources package done.\n")
     elif sys.argv[1] == 'install' :
-        print """\n
+        print("""\n
 Installation completed successfully!
-Enjoy Data with ViTables, the troll of the PyTables family."""
+Enjoy Data with ViTables, the troll of the PyTables family.""")
