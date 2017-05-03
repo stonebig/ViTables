@@ -136,7 +136,7 @@ class RenameDlg(QtWidgets.QDialog, Ui_RenameNodeDialog):
         self.valueLE.textChanged.emit(self.valueLE.text())
 
 
-    @QtCore.pyqtSlot('QString', name="on_valueLE_textChanged")
+    @pyqtSlot('QString', name="on_valueLE_textChanged")
     def checkName(self, new_name):
         """
         Check the new name value.
@@ -184,7 +184,7 @@ class RenameDlg(QtWidgets.QDialog, Ui_RenameNodeDialog):
             self.overwrite_button.setEnabled(0)
 
 
-    @QtCore.pyqtSlot("QAbstractButton *", name="on_buttonsBox_clicked")
+    @pyqtSlot("QAbstractButton *", name="on_buttonsBox_clicked")
     def executeAction(self, button):
         """Execute the action specified by the clicked button.
 

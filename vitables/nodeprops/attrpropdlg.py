@@ -265,8 +265,8 @@ class AttrPropDlg(QtWidgets.QDialog, Ui_AttrPropDialog):
         self.helpButton.clicked.connect(QtWidgets.QWhatsThis.enterWhatsThisMode)
 
 
-    @QtCore.pyqtSlot("QModelIndex", name="on_sysTable_clicked")
-    @QtCore.pyqtSlot("QModelIndex", name="on_userTable_clicked")
+    @pyqtSlot("QModelIndex", name="on_sysTable_clicked")
+    @pyqtSlot("QModelIndex", name="on_userTable_clicked")
     def displaySelectedCell(self, index):
         """Show the content of the clicked cell in the line edit at bottom.
 
@@ -284,7 +284,7 @@ class AttrPropDlg(QtWidgets.QDialog, Ui_AttrPropDialog):
             self.userAttrCellLE.setText(model_item.text())
 
 
-    @QtCore.pyqtSlot(name="on_addButton_clicked")
+    @pyqtSlot(name="on_addButton_clicked")
     def addAttribute(self):
         """Add a new attribute to the user's attributes table."""
 
@@ -309,7 +309,7 @@ class AttrPropDlg(QtWidgets.QDialog, Ui_AttrPropDialog):
         self.userTable.edit(name_item.index())
 
 
-    @QtCore.pyqtSlot(name="on_delButton_clicked")
+    @pyqtSlot(name="on_delButton_clicked")
     def delAttribute(self):
         """
         Remove an attribute from the user's attributes table.
@@ -394,7 +394,7 @@ class AttrPropDlg(QtWidgets.QDialog, Ui_AttrPropDialog):
         return False
 
 
-    @QtCore.pyqtSlot(name="on_buttonsBox_accepted")
+    @pyqtSlot(name="on_buttonsBox_accepted")
     def accept(self):
         """
         Overwritten slot for accepted dialogs.

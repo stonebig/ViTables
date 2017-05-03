@@ -165,7 +165,7 @@ class QueryDlg(QtWidgets.QDialog, Ui_QueryDialog):
         # initial condition then the OK button will be enabled
         self.nameLE.textChanged.emit(self.nameLE.text())
 
-    @QtCore.pyqtSlot(bool, name="on_indicesCheckBox_toggled")
+    @pyqtSlot(bool, name="on_indicesCheckBox_toggled")
     def enableIndicesColumn(self, cb_on):
         """
         Enable/disable the indices column name field.
@@ -184,7 +184,7 @@ class QueryDlg(QtWidgets.QDialog, Ui_QueryDialog):
         else:
             self.indicesColumnLE.setEnabled(0)
 
-    @QtCore.pyqtSlot("QString", name="on_operatorsComboBox_activated")
+    @pyqtSlot("QString", name="on_operatorsComboBox_activated")
     def insertOperator(self, operator):
         """
         Insert an operator in the query line editor.
@@ -193,7 +193,7 @@ class QueryDlg(QtWidgets.QDialog, Ui_QueryDialog):
         """
         self.queryLE.insert(' {0} '.format(operator))
 
-    @QtCore.pyqtSlot("QString", name="on_columnsComboBox_activated")
+    @pyqtSlot("QString", name="on_columnsComboBox_activated")
     def insertField(self, field_id):
         """
         Insert a fieldname in the query line editor.
@@ -209,7 +209,7 @@ class QueryDlg(QtWidgets.QDialog, Ui_QueryDialog):
         """
         self.queryLE.insert(field_id.split(' ')[0])
 
-    @QtCore.pyqtSlot("QString", name="on_functionsComboBox_activated")
+    @pyqtSlot("QString", name="on_functionsComboBox_activated")
     def insertFunction(self, text):
         """
         Insert a function in the query line editor.
@@ -245,11 +245,11 @@ class QueryDlg(QtWidgets.QDialog, Ui_QueryDialog):
                      'complex': 'complex(F, F)'}
         self.queryLE.insert(name2call[text])
 
-    @QtCore.pyqtSlot("QString", name="on_nameLE_textChanged")
-    @QtCore.pyqtSlot("QString", name="on_indicesColumnLE_textChanged")
-    @QtCore.pyqtSlot("QString", name="on_queryLE_textChanged")
-    @QtCore.pyqtSlot("QString", name="on_rstartLE_textChanged")
-    @QtCore.pyqtSlot("QString", name="on_rstopLE_textChanged")
+    @pyqtSlot("QString", name="on_nameLE_textChanged")
+    @pyqtSlot("QString", name="on_indicesColumnLE_textChanged")
+    @pyqtSlot("QString", name="on_queryLE_textChanged")
+    @pyqtSlot("QString", name="on_rstartLE_textChanged")
+    @pyqtSlot("QString", name="on_rstopLE_textChanged")
     def updateOKState(self):
         """
         Update the activation state of the `OK` button.
@@ -384,7 +384,7 @@ class QueryDlg(QtWidgets.QDialog, Ui_QueryDialog):
             vitables.utils.formatExceptionInfo()
         return syntax_ok
 
-    @QtCore.pyqtSlot(name="on_buttonBox_accepted")
+    @pyqtSlot(name="on_buttonBox_accepted")
     def composeQuery(self):
         """Slot for composing the query and accept the dialog."""
 

@@ -91,10 +91,10 @@ class VTApp(QtCore.QObject):
     # Convenience signals for the plugins. Usually new signals are added
     # when a new plugin is added to ViTables. They are the link between
     # the plugins and the core of the program
-    leaf_model_created = QtCore.pyqtSignal(QtWidgets.QMdiSubWindow,
+    leaf_model_created = pyqtSignal(QtWidgets.QMdiSubWindow,
                                            name="leafModelCreated")
-    dbtree_model_created = QtCore.pyqtSignal()
-    pluginsLoaded = QtCore.pyqtSignal()
+    dbtree_model_created = pyqtSignal()
+    pluginsLoaded = pyqtSignal()
 
     def __init__(self, mode='', dblist='', h5files=None, keep_splash=True):
         """
@@ -1244,7 +1244,7 @@ class VTApp(QtCore.QObject):
             'PyTables': tables.__version__ ,
             'NumPy': tables.numpy.__version__,
             'Qt': QtCore.qVersion(),
-            'PyQt': QtCore.PYQT_VERSION_STR,
+            'PyQt': pyqt_VERSION_STR,
             'ViTables': vtconfig.getVersion()
         }
 

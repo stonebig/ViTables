@@ -156,7 +156,7 @@ class CalculatorDialog(QtWidgets.QDialog, Ui_CalculatorDialog):
                 self._store_expressions()
                 self.accept()
 
-    @QtCore.pyqtSlot()
+    @pyqtSlot()
     def on_save_button_clicked(self):
         """Store expression for future use.
 
@@ -182,7 +182,7 @@ class CalculatorDialog(QtWidgets.QDialog, Ui_CalculatorDialog):
                                             self.expression_edit.toPlainText(),
                                             self.result_edit.text())
 
-    @QtCore.pyqtSlot()
+    @pyqtSlot()
     def on_remove_button_clicked(self):
         """Remove stored expression.
 

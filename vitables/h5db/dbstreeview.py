@@ -48,7 +48,7 @@ class DBsTreeView(QtWidgets.QTreeView):
     """
 
 
-    dbsTreeViewCreated = QtCore.pyqtSignal(QtWidgets.QTreeView)
+    dbsTreeViewCreated = pyqtSignal(QtWidgets.QTreeView)
 
     def __init__(self, vtapp, vtgui, model, parent=None):
         """Create the view.

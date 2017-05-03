@@ -95,7 +95,7 @@ class InputNodeName(QtWidgets.QDialog, Ui_InputNodenameDialog):
         self.valueLE.textChanged.emit(self.valueLE.text())
 
 
-    @QtCore.pyqtSlot("QString", name="on_valueLE_textChanged")
+    @pyqtSlot("QString", name="on_valueLE_textChanged")
     def checkName(self, current):
         """
         Check the current name value.
@@ -112,7 +112,7 @@ class InputNodeName(QtWidgets.QDialog, Ui_InputNodenameDialog):
             self.edit_button.setEnabled(1)
 
 
-    @QtCore.pyqtSlot(name="on_buttonsBox_accepted")
+    @pyqtSlot(name="on_buttonsBox_accepted")
     def saveName(self):
         """Slot for saving the entered name and closing the dialog.
         """
