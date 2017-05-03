@@ -28,9 +28,9 @@ node of the tree contains the object tree of a `PyTables`/`HDF5` database.
 
 __docformat__ = 'restructuredtext'
 
-from PyQt5 import QtCore
-from PyQt5 import QtGui
-from PyQt5 import QtWidgets
+from qtpy import QtCore
+from qtpy import QtGui
+from qtpy import QtWidgets
 
 from vitables.h5db.nodeitemdelegate import NodeItemDelegate
 

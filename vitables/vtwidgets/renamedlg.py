@@ -47,11 +47,11 @@ __docformat__ = 'restructuredtext'
 import os.path
 import re
 
-from PyQt5 import QtCore
-from PyQt5 import QtGui
-from PyQt5 import QtWidgets
+from qtpy import QtCore
+from qtpy import QtGui
+from qtpy import QtWidgets
 
-from PyQt5.uic import loadUiType
+from qtpy.uic import loadUiType
 
 import vitables.utils
 
